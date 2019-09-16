@@ -18,7 +18,7 @@ void enqueue()
 		{
 			front=0;
 		}
-		printf("ENTER A NUMBER TO BE INSERTED IN QUEUE");
+		printf("ENTER A NUMBER TO BE INSERTED IN QUEUE:");
 		scanf("%d",&x);
 		rear=(rear+1)%max;
 		queue[rear]=x;
@@ -29,7 +29,7 @@ void dequeue()
 	int y;
 	if(front==-1 || front>rear)
 	{
-		printf("QUEUE ID EMPTY  ");
+		printf("QUEUE IS EMPTY  ");
 	}
 	else
 	{
@@ -61,18 +61,18 @@ void display()
 		{
 			for(i=front;i<=rear;i++)
 		{
-			printf("%d  \n",queue[i]);
+			printf("%d  \t",queue[i]);
 		}
 		}
 		else if(rear<front)
 		{
 			for(i=rear;i<=max-1;i++)
 			{
-				printf("%d  \n",queue[i]);
+				printf("%d  \t",queue[i]);
 			}
 			for(i=0;i<=front;i++)
 			{
-				printf("%d  \n",queue[i]);
+				printf("%d  \t",queue[i]);
 			}
 			
 		}
@@ -83,12 +83,12 @@ int main()
 	int a;
 	while(1)
 	{
-	printf("WELCOME TO QUEUE PROGRAM  \n");
+	printf("\n WELCOME TO QUEUE PROGRAM  \n");
 	printf("1.ENQUEUE  \n");
 	printf("2.DEQUEUE  \n");
 	printf("3.DISPLAY  \n");
 	printf("4.EXIT  \n");
-	printf("ENETR YOUR CHOICE \n");
+	printf("ENETR YOUR CHOICE: \n");
 	scanf("%d",&a);
 	switch(a)
 	{
